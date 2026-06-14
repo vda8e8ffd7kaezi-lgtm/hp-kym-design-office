@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KYM DESIGN OFFICE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="nav">
+    <a href="/" class="nav__logo">
+      <img src="image_data/logo.png" alt="KYM DESIGN OFFICE" class="nav__logo-img">
+    </a>
+    <ul class="nav__links">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#works">WORKS</a></li>
+      <li><a href="#studio">STUDIO</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- TOPセクション -->
+  <section class="hero">
+
+    <!-- 左カラム：見出し -->
+    <div class="hero__left">
+      <h1 class="hero__headline">
+        Inspire and<br>
+        create space<br>
+        and design.
+      </h1>
+    </div>
+
+    <!-- 右カラム：画像＋テキスト -->
+    <div class="hero__right">
+
+      <!-- ヒーロー画像エリア -->
+      <div class="hero__image-wrap">
+        <div class="hero__image">
+          <div class="hero__image-placeholder"></div>
+        </div>
+        <!-- 会社名縦書きオーバーレイ -->
+        <span class="hero__brand-vertical">KYM DESIGN</span>
+      </div>
+
+      <!-- 画像下テキスト -->
+      <div class="hero__description">
+        <p class="hero__body">
+          KYMではデザインから施工まで責任を持って手掛けます。<br><br>
+          店舗から、マンションのリフォームのことまで何でもご相談ください。<br>
+          ご相談は無料です。まずはお気軽にお問合せください。<br>
+          あなたのスタイルを一緒に作りましょう。
+        </p>
+        <a class="hero__cta" href="#works">
+          <span>Explore</span>
+          <svg class="hero__cta-arrow" viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="6" x2="34" y2="6" stroke="currentColor" stroke-width="1"/>
+            <polyline points="28,1 35,6 28,11" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

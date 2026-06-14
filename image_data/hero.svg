@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <!-- 空のグラデーション -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="35%" stop-color="#1c1c1c"/>
+      <stop offset="70%" stop-color="#2e2e2e"/>
+      <stop offset="100%" stop-color="#3a3a3a"/>
+    </linearGradient>
+    <!-- 水面グラデーション -->
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#252525"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <!-- 霧のグラデーション -->
+    <linearGradient id="fog" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a1a1a" stop-opacity="0.6"/>
+    </linearGradient>
+    <!-- フィルム粒子テクスチャ -->
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="overlay" result="blend"/>
+      <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+    </filter>
+    <!-- 光のぼかし -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- 建物のグラデーション（左） -->
+    <linearGradient id="bldLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#111"/>
+      <stop offset="100%" stop-color="#1e1e1e"/>
+    </linearGradient>
+    <!-- 建物のグラデーション（右） -->
+    <linearGradient id="bldRight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#181818"/>
+      <stop offset="100%" stop-color="#0e0e0e"/>
+    </linearGradient>
+    <!-- 水面反射グラデーション -->
+    <linearGradient id="reflect" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#444" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#111" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景：空 -->
+  <rect width="1200" height="700" fill="url(#sky)"/>
+
+  <!-- 遠景：霞んだ建物群（薄い） -->
+  <g opacity="0.25">
+    <rect x="80" y="280" width="60" height="160" fill="#555"/>
+    <rect x="130" y="250" width="40" height="190" fill="#4a4a4a"/>
+    <rect x="160" y="270" width="55" height="170" fill="#505050"/>
+    <rect x="900" y="260" width="50" height="180" fill="#4e4e4e"/>
+    <rect x="940" y="240" width="65" height="200" fill="#484848"/>
+    <rect x="995" y="275" width="45" height="165" fill="#525252"/>
+    <rect x="1030" y="255" width="70" height="185" fill="#4a4a4a"/>
+  </g>
+
+  <!-- 中景：メイン建物群 -->
+
+  <!-- 左端の超高層 -->
+  <rect x="0" y="120" width="90" height="320" fill="url(#bldLeft)"/>
+  <rect x="10" y="100" width="50" height="340" fill="#161616"/>
+  <!-- 窓 -->
+  <rect x="18" y="115" width="6" height="10" fill="#888" opacity="0.4"/>
+  <rect x="28" y="115" width="6" height="10" fill="#777" opacity="0.3"/>
+  <rect x="18" y="135" width="6" height="10" fill="#666" opacity="0.35"/>
+  <rect x="28" y="135" width="6" height="10" fill="#999" opacity="0.5"/>
+  <rect x="18" y="155" width="6" height="10" fill="#777" opacity="0.3"/>
+  <rect x="28" y="160" width="6" height="10" fill="#888" opacity="0.4"/>
+  <rect x="18" y="180" width="6" height="10" fill="#aaa" opacity="0.6" filter="url(#glow)"/>
+
+  <!-- 左の高層ビル群 -->
+  <rect x="85" y="180" width="75" height="260" fill="#1a1a1a"/>
+  <rect x="95" y="160" width="45" height="280" fill="#141414"/>
+  <!-- 窓ライン -->
+  <rect x="100" y="170" width="5" height="260" fill="#2a2a2a" opacity="0.5"/>
+  <rect x="110" y="170" width="5" height="260" fill="#2a2a2a" opacity="0.5"/>
+  <rect x="120" y="170" width="5" height="260" fill="#2a2a2a" opacity="0.5"/>
+
+  <!-- 中央左の高層ビル -->
+  <rect x="170" y="90" width="100" height="350" fill="#111"/>
+  <rect x="190" y="70" width="60" height="370" fill="#0d0d0d"/>
+  <!-- 窓の光 -->
+  <rect x="198" y="90" width="8" height="12" fill="#c8b89a" opacity="0.7" filter="url(#glow)"/>
+  <rect x="212" y="95" width="8" height="12" fill="#bbb" opacity="0.4"/>
+  <rect x="198" y="115" width="8" height="12" fill="#ddd" opacity="0.5" filter="url(#glow)"/>
+  <rect x="212" y="118" width="8" height="12" fill="#ccc" opacity="0.3"/>
+  <rect x="198" y="140" width="8" height="12" fill="#bbb" opacity="0.4"/>
+  <rect x="212" y="144" width="8" height="12" fill="#c8b89a" opacity="0.6" filter="url(#glow)"/>
+  <rect x="198" y="165" width="8" height="12" fill="#aaa" opacity="0.35"/>
+
+  <!-- 中央やや左 -->
+  <rect x="265" y="150" width="85" height="290" fill="#181818"/>
+  <rect x="275" y="130" width="55" height="310" fill="#131313"/>
+
+  <!-- 中央のランドマークビル（最も高い） -->
+  <rect x="350" y="50" width="120" height="390" fill="#121212"/>
+  <rect x="365" y="30" width="80" height="410" fill="#0c0c0c"/>
+  <!-- 頂部アンテナ -->
+  <rect x="400" y="10" width="4" height="30" fill="#333"/>
+  <!-- 窓の格子 -->
+  <g opacity="0.3">
+    <line x1="380" y1="40" x2="380" y2="440" stroke="#333" stroke-width="1"/>
+    <line x1="392" y1="40" x2="392" y2="440" stroke="#333" stroke-width="1"/>
+    <line x1="404" y1="40" x2="404" y2="440" stroke="#333" stroke-width="1"/>
+    <line x1="416" y1="40" x2="416" y2="440" stroke="#2a2a2a" stroke-width="1"/>
+    <line x1="370" y1="60" x2="438" y2="60" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="80" x2="438" y2="80" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="100" x2="438" y2="100" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="120" x2="438" y2="120" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="140" x2="438" y2="140" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="160" x2="438" y2="160" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="180" x2="438" y2="180" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="200" x2="438" y2="200" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="220" x2="438" y2="220" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="240" x2="438" y2="240" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="260" x2="438" y2="260" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="280" x2="438" y2="280" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="300" x2="438" y2="300" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="320" x2="438" y2="320" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="340" x2="438" y2="340" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="360" x2="438" y2="360" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="380" x2="438" y2="380" stroke="#2a2a2a" stroke-width="0.5"/>
+    <line x1="370" y1="400" x2="438" y2="400" stroke="#2a2a2a" stroke-width="0.5"/>
+  </g>
+  <!-- 点灯している窓 -->
+  <rect x="375" y="55" width="6" height="8" fill="#d4c4a0" opacity="0.8" filter="url(#glow)"/>
+  <rect x="397" y="75" width="6" height="8" fill="#ccc" opacity="0.6" filter="url(#glow)"/>
+  <rect x="385" y="95" width="6" height="8" fill="#d4c4a0" opacity="0.7" filter="url(#glow)"/>
+  <rect x="410" y="115" width="6" height="8" fill="#bbb" opacity="0.5"/>
+  <rect x="375" y="135" width="6" height="8" fill="#d0c090" opacity="0.6" filter="url(#glow)"/>
+  <rect x="398" y="155" width="6" height="8" fill="#ddd" opacity="0.4"/>
+  <rect x="420" y="175" width="6" height="8" fill="#c8b880" opacity="0.7" filter="url(#glow)"/>
+  <rect x="382" y="220" width="6" height="8" fill="#d4c4a0" opacity="0.5" filter="url(#glow)"/>
+
+  <!-- 中央右の建物群 -->
+  <rect x="465" y="130" width="90" height="310" fill="#161616"/>
+  <rect x="480" y="110" width="60" height="330" fill="#111"/>
+
+  <rect x="548" y="170" width="80" height="270" fill="#1a1a1a"/>
+  <rect x="558" y="150" width="50" height="290" fill="#141414"/>
+
+  <!-- 右側の建物群 -->
+  <rect x="620" y="100" width="110" height="340" fill="#131313"/>
+  <rect x="635" y="80" width="75" height="360" fill="#0e0e0e"/>
+  <!-- 窓 -->
+  <rect x="645" y="95" width="7" height="10" fill="#aaa" opacity="0.4"/>
+  <rect x="658" y="95" width="7" height="10" fill="#c8b89a" opacity="0.6" filter="url(#glow)"/>
+  <rect x="671" y="100" width="7" height="10" fill="#999" opacity="0.35"/>
+  <rect x="645" y="120" width="7" height="10" fill="#d4c4a0" opacity="0.7" filter="url(#glow)"/>
+  <rect x="658" y="125" width="7" height="10" fill="#bbb" opacity="0.4"/>
+  <rect x="671" y="115" width="7" height="10" fill="#aaa" opacity="0.3"/>
+  <rect x="645" y="150" width="7" height="10" fill="#888" opacity="0.35"/>
+  <rect x="658" y="155" width="7" height="10" fill="#c8b89a" opacity="0.5" filter="url(#glow)"/>
+
+  <rect x="725" y="160" width="70" height="280" fill="#181818"/>
+  <rect x="735" y="140" width="45" height="300" fill="#141414"/>
+
+  <rect x="790" y="110" width="95" height="330" fill="#121212"/>
+  <rect x="805" y="90" width="65" height="350" fill="#0d0d0d"/>
+  <!-- 窓の格子 -->
+  <g opacity="0.25">
+    <line x1="815" y1="100" x2="815" y2="440" stroke="#333" stroke-width="1"/>
+    <line x1="828" y1="100" x2="828" y2="440" stroke="#333" stroke-width="1"/>
+    <line x1="841" y1="100" x2="841" y2="440" stroke="#333" stroke-width="1"/>
+    <line x1="854" y1="100" x2="854" y2="440" stroke="#2a2a2a" stroke-width="1"/>
+    <line x1="810" y1="120" x2="868" y2="120" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="145" x2="868" y2="145" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="170" x2="868" y2="170" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="195" x2="868" y2="195" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="220" x2="868" y2="220" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="245" x2="868" y2="245" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="270" x2="868" y2="270" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="295" x2="868" y2="295" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="320" x2="868" y2="320" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="345" x2="868" y2="345" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="370" x2="868" y2="370" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="395" x2="868" y2="395" stroke="#222" stroke-width="0.5"/>
+    <line x1="810" y1="420" x2="868" y2="420" stroke="#222" stroke-width="0.5"/>
+  </g>
+  <!-- 光る窓 -->
+  <rect x="820" y="108" width="6" height="9" fill="#d4c4a0" opacity="0.8" filter="url(#glow)"/>
+  <rect x="833" y="133" width="6" height="9" fill="#ccc" opacity="0.5" filter="url(#glow)"/>
+  <rect x="820" y="158" width="6" height="9" fill="#d0c090" opacity="0.7" filter="url(#glow)"/>
+  <rect x="847" y="183" width="6" height="9" fill="#bbb" opacity="0.4"/>
+  <rect x="833" y="208" width="6" height="9" fill="#c8b880" opacity="0.6" filter="url(#glow)"/>
+  <rect x="820" y="233" width="6" height="9" fill="#ddd" opacity="0.35"/>
+  <rect x="847" y="258" width="6" height="9" fill="#d4c4a0" opacity="0.5" filter="url(#glow)"/>
+
+  <!-- 右側追加ビル -->
+  <rect x="880" y="150" width="75" height="290" fill="#171717"/>
+  <rect x="890" y="130" width="50" height="310" fill="#121212"/>
+
+  <rect x="950" y="80" width="100" height="360" fill="#111"/>
+  <rect x="965" y="60" width="70" height="380" fill="#0c0c0c"/>
+
+  <rect x="1045" y="140" width="80" height="300" fill="#181818"/>
+  <rect x="1055" y="120" width="55" height="320" fill="#131313"/>
+
+  <rect x="1120" y="100" width="80" height="340" fill="#141414"/>
+  <rect x="1135" y="80" width="65" height="360" fill="#0f0f0f"/>
+
+  <!-- 地表ライン -->
+  <rect x="0" y="438" width="1200" height="8" fill="#1a1a1a"/>
+
+  <!-- 水面 -->
+  <rect x="0" y="445" width="1200" height="255" fill="url(#water)"/>
+
+  <!-- 水面の反射（建物の揺れた反射） -->
+  <!-- 中央ビル反射 -->
+  <rect x="365" y="446" width="80" height="180" fill="#0d0d0d" opacity="0.6"/>
+  <line x1="380" y1="446" x2="375" y2="626" stroke="#1a1a1a" stroke-width="1" opacity="0.3"/>
+  <line x1="392" y1="446" x2="390" y2="626" stroke="#1a1a1a" stroke-width="1" opacity="0.3"/>
+  <line x1="404" y1="446" x2="406" y2="626" stroke="#1a1a1a" stroke-width="1" opacity="0.3"/>
+
+  <!-- 水面の光の揺らめき -->
+  <ellipse cx="200" cy="480" rx="80" ry="4" fill="#555" opacity="0.15"/>
+  <ellipse cx="400" cy="490" rx="60" ry="3" fill="#666" opacity="0.12"/>
+  <ellipse cx="800" cy="475" rx="90" ry="3" fill="#555" opacity="0.1"/>
+  <ellipse cx="1000" cy="485" rx="70" ry="3" fill="#555" opacity="0.12"/>
+
+  <!-- 水面の横波 -->
+  <g opacity="0.08" stroke="#777" stroke-width="0.5" fill="none">
+    <path d="M0,460 Q150,456 300,462 Q450,468 600,461 Q750,455 900,463 Q1050,469 1200,460"/>
+    <path d="M0,475 Q200,470 400,477 Q600,483 800,472 Q1000,465 1200,475"/>
+    <path d="M0,492 Q180,488 360,494 Q540,500 720,489 Q900,482 1080,491 Q1140,494 1200,491"/>
+    <path d="M0,510 Q250,505 500,513 Q750,519 1000,507 Q1100,503 1200,509"/>
+    <path d="M0,530 Q200,526 400,532 Q700,540 900,525 Q1100,518 1200,528"/>
+  </g>
+
+  <!-- 霧のオーバーレイ（大気遠近法） -->
+  <rect x="0" y="380" width="1200" height="80" fill="url(#fog)"/>
+
+  <!-- 水面と空の境界の光 -->
+  <rect x="0" y="436" width="1200" height="3" fill="#444" opacity="0.3"/>
+  <rect x="0" y="437" width="1200" height="2" fill="#888" opacity="0.1"/>
+
+  <!-- フィルム粒子オーバーレイ -->
+  <rect width="1200" height="700" fill="#888" opacity="0.03" filter="url(#grain)"/>
+
+  <!-- 全体を少し暗く（写真らしい締まり） -->
+  <rect width="1200" height="700" fill="#000" opacity="0.15"/>
+
+  <!-- 四隅のビネット -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="0%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.5"/>
+  </radialGradient>
+  <rect width="1200" height="700" fill="url(#vignette)"/>
+</svg>
