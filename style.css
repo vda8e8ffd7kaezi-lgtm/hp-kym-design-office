@@ -813,6 +813,22 @@ a:focus-visible {
   letter-spacing: 0.04em;
   color: var(--ink);
 }
+/* Instagram などSNSリンク（アイコン＋テキスト） */
+.contact__sns {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+.contact__sns:hover {
+  opacity: 0.55;
+}
+.contact__sns-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+}
 .contact__cta {
   display: inline-flex;
   align-items: center;
