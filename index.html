@@ -5,320 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KYM DESIGN OFFICE｜福岡・島根の建築設計・施工・インテリアデザイン</title>
   <meta name="description" content="KYM DESIGN OFFICEは、店舗設計・施工、注文住宅、マンションリフォーム、インテリアデザインを手がける二級建築士事務所です。福岡・島根を拠点に、デザインから施工まで一貫して対応します。">
-  <link rel="stylesheet" href="style.css?v=20260614c">
+  <link rel="stylesheet" href="style.css?v=20260627d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home-board">
 
-  <!-- ===== ナビゲーション ===== -->
-  <header class="nav">
-    <a href="#hero" class="nav__logo">
-      <img src="image_data/logo.png" alt="KYM DESIGN OFFICE">
-    </a>
-    <nav class="nav__menu" aria-label="Main navigation">
-      <a href="#about">ABOUT</a>
-      <a href="#services">SERVICES</a>
-      <a href="works.html">WORKS</a>
-      <a href="#contact">CONTACT</a>
-    </nav>
-  </header>
+  <!-- ===== ヒーロー完結型トップ ===== -->
+  <main class="board" id="top">
+    <header class="board__header">
+      <a class="board__brand" href="index.html" aria-label="KYM DESIGN OFFICE">
+        <img src="image_data/logo.png" alt="">
+        <span>KYM DESIGN OFFICE</span>
+      </a>
+      <nav class="board__nav" aria-label="Main navigation">
+        <a href="profile.html">PROFILE</a>
+        <span>/</span>
+        <a href="works.html">WORKS</a>
+        <span>/</span>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </header>
 
-  <main>
+    <section class="board__stage" aria-labelledby="board-title">
+      <aside class="board__index" aria-label="Project index">
+        <span class="board__rule"></span>
+        <p class="board__number">01</p>
+        <span class="board__accent"></span>
+        <p class="board__label">PROJECT<br>INDEX</p>
+      </aside>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="hero">
-      <span class="hero__abstract" aria-hidden="true">KYM</span>
-      <div class="hero__main">
-        <div class="hero__head">
-          <span class="hero__mark" data-reveal="up"></span>
-          <span class="hero__kicker" data-reveal="up" style="--d:.04s">KYM DESIGN OFFICE</span>
-          <h1 class="hero__title" data-reveal="up" style="--d:.08s">Create Space<br>and Your Life.</h1>
-          <p class="hero__lead" data-reveal="up" style="--d:.14s">
-            店舗、住まい、リノベーションまで。素材・光・施工の質を整え、長く残る空間をつくります。
-          </p>
-        </div>
+      <section class="board__main">
+        <h1 id="board-title">Architecture that<br>fits the life within.</h1>
+        <a class="board-card board-card--feature" href="works.html">
+          <img src="assets/images/kym-hero-collage.jpg" alt="住宅とインテリアのプロジェクトイメージ">
+          <span>RESIDENCE / HOUSE PLANNING</span>
+          <small>Fukuoka, Japan</small>
+        </a>
+      </section>
 
-        <div class="hero__strip">
-          <div class="hero__cluster">
-            <div class="frame hf hf--a" data-reveal="clip" style="--d:.2s">
-              <img class="visual" src="assets/images/kym-hero-cut-01.jpg" alt="">
-            </div>
-            <div class="frame hf hf--b" data-reveal="clip" style="--d:.3s">
-              <img class="visual" src="assets/images/kym-hero-cut-02.jpg" alt="">
-            </div>
-            <div class="frame hf hf--c" data-reveal="clip" style="--d:.4s">
-              <img class="visual" src="assets/images/kym-hero-cut-03.jpg" alt="">
-            </div>
-          </div>
-          <div class="frame hf hf--d" data-reveal="clip" style="--d:.5s">
-            <img class="visual" src="assets/images/kym-hero-cut-04.jpg" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="hero__foot" data-reveal="fade" style="--d:.6s">
-        <span class="hero__foot-label">Architecture &amp; Interior Design</span>
-        <span class="hero__rule"></span>
-        <span class="hero__foot-place">Fukuoka · Shimane</span>
-      </div>
+      <section class="board__projects" aria-label="Primary pages">
+        <a class="board-card" href="works.html">
+          <img src="assets/images/kym-process-materials.jpg" alt="素材選定のプロジェクトイメージ">
+          <span>INTERIOR / MATERIAL STUDY</span>
+          <small>Shimane, Japan</small>
+        </a>
+        <a class="board-card" href="works.html">
+          <img src="studio/LINE_ALBUM_Bandel-Osaka_260331_1.jpg" alt="Bandel Osaka 店舗設計の施工実績">
+          <span>COMMERCIAL / BANDEL OSAKA</span>
+          <small>Osaka, Japan</small>
+        </a>
+        <a class="board-card" href="profile.html">
+          <img src="assets/images/kym-process-mono.jpg" alt="設計検討のプロジェクトイメージ">
+          <span>PROFILE / DESIGN PROCESS</span>
+          <small>Office information</small>
+        </a>
+        <a class="board-card" href="contact.html">
+          <img src="assets/images/kym-hero-mono.jpg" alt="空間ディテールのプロジェクトイメージ">
+          <span>CONTACT / CONSULTATION</span>
+          <small>First consultation</small>
+        </a>
+      </section>
     </section>
 
-    <!-- ===== 01 ABOUT ===== -->
-    <section class="section" id="about">
-      <header class="head">
-        <span class="head__num" data-reveal="up">01</span>
-        <div class="head__text" data-reveal="up" style="--d:.08s">
-          <span class="head__label">About</span>
-          <h2 class="head__title">空間と、その先の<br>暮らしをデザインする。</h2>
-        </div>
-      </header>
-
-      <div class="about__body" data-reveal="up" style="--d:.12s">
-        <p class="about__statement">
-          KYM DESIGN OFFICE は、店舗からマンションのリフォーム、注文住宅まで、
-          デザインから施工まで責任を持って手がけています。
-        </p>
-        <div class="about__detail">
-          <p>
-            新築・中古を問わず、住まう人・使う人のスタイルに寄り添い、
-            一つひとつの空間を丁寧に設計します。ご相談は無料です。
-            あなたのスタイルを、一緒に作りましょう。
-          </p>
-          <dl class="about__meta">
-            <div>
-              <dt>Principal</dt>
-              <dd>渡部 聖美 — Kiyomi Watanabe</dd>
-            </div>
-            <div>
-              <dt>License</dt>
-              <dd>二級建築士（登録番号 第51648号）</dd>
-            </div>
-            <div>
-              <dt>Registration</dt>
-              <dd>福岡県知事登録 第2-60660号</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-
-      <div class="statement-band" data-reveal="up">
-        <div>
-          <span class="statement-band__label">Design policy</span>
-          <p>見た目の美しさだけでなく、動線・素材・光・施工の納まりまで。暮らしや事業が自然に続いていくための空間を、設計と現場の両面から整えます。</p>
-        </div>
-        <figure class="statement-band__visual">
-          <img src="assets/images/kym-process-mono.jpg" alt="素材と図面を並べた設計検討のイメージ">
-        </figure>
-      </div>
-    </section>
-
-    <!-- ===== 02 SERVICES ===== -->
-    <section class="section" id="services">
-      <header class="head">
-        <span class="head__num" data-reveal="up">02</span>
-        <div class="head__text" data-reveal="up" style="--d:.08s">
-          <span class="head__label">Services</span>
-          <h2 class="head__title">手がける仕事</h2>
-        </div>
-      </header>
-
-      <ul class="services">
-        <li class="services__item" data-reveal="up">
-          <span class="services__no">01</span>
-          <div>
-            <h3 class="services__name">店舗設計・施工</h3>
-            <span class="services__scope">Shop / Salon / Office</span>
-          </div>
-          <p class="services__desc">コンセプト設計から内装施工まで、ブランドを体現する空間を一貫して整えます。</p>
-        </li>
-        <li class="services__item" data-reveal="up">
-          <span class="services__no">02</span>
-          <div>
-            <h3 class="services__name">注文住宅</h3>
-            <span class="services__scope">House planning</span>
-          </div>
-          <p class="services__desc">敷地と暮らしを読み解き、永く愛される一邸を設計します。</p>
-        </li>
-        <li class="services__item" data-reveal="up">
-          <span class="services__no">03</span>
-          <div>
-            <h3 class="services__name">マンションリフォーム</h3>
-            <span class="services__scope">Renovation</span>
-          </div>
-          <p class="services__desc">中古物件の可能性を引き出し、住まいを再構築するリノベーション。</p>
-        </li>
-        <li class="services__item" data-reveal="up">
-          <span class="services__no">04</span>
-          <div>
-            <h3 class="services__name">インテリアデザイン</h3>
-            <span class="services__scope">Material / Furniture</span>
-          </div>
-          <p class="services__desc">素材・光・家具まで、空間全体の質を設計の視点で整えます。</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ===== 03 PROCESS ===== -->
-    <section class="section section--process" id="process">
-      <header class="head">
-        <span class="head__num" data-reveal="up">03</span>
-        <div class="head__text" data-reveal="up" style="--d:.08s">
-          <span class="head__label">Process</span>
-          <h2 class="head__title">相談から完成まで、<br>一つずつ明確に。</h2>
-        </div>
-      </header>
-
-      <ol class="process">
-        <li class="process__item" data-reveal="up">
-          <span class="process__no">01</span>
-          <h3>ご相談</h3>
-          <p>ご要望・ご予算・物件状況を伺い、進め方を整理します。初回相談は無料です。</p>
-        </li>
-        <li class="process__item" data-reveal="up">
-          <span class="process__no">02</span>
-          <h3>設計・お見積り</h3>
-          <p>プラン、素材、施工範囲を検討し、イメージと費用感を具体化します。</p>
-        </li>
-        <li class="process__item" data-reveal="up">
-          <span class="process__no">03</span>
-          <h3>施工</h3>
-          <p>設計意図を現場に反映しながら、納まり・品質・工程を確認して進めます。</p>
-        </li>
-        <li class="process__item" data-reveal="up">
-          <span class="process__no">04</span>
-          <h3>お引き渡し</h3>
-          <p>完成後の使い方やメンテナンスまで確認し、長く使える状態でお渡しします。</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- ===== 04 WORKS ===== -->
-    <section class="section" id="works">
-      <header class="head">
-        <span class="head__num" data-reveal="up">04</span>
-        <div class="head__text" data-reveal="up" style="--d:.08s">
-          <span class="head__label">Works</span>
-          <h2 class="head__title">施工実績</h2>
-        </div>
-        <a href="works.html" class="head__link" data-reveal="fade" style="--d:.16s">View all →</a>
-      </header>
-
-      <ul class="works">
-        <li class="works__item" data-reveal="up">
-          <a href="works.html" class="works__link">
-            <div class="frame frame--work"><span class="frame__ph">Project image</span></div>
-            <div class="works__caption">
-              <span class="works__year">2025</span>
-              <h3 class="works__name">Bandel Osaka</h3>
-              <span class="works__type">店舗 / Osaka</span>
-            </div>
-          </a>
-        </li>
-        <li class="works__item" data-reveal="up">
-          <a href="works.html" class="works__link">
-            <div class="frame frame--work"><span class="frame__ph">Project image</span></div>
-            <div class="works__caption">
-              <span class="works__year">2024</span>
-              <h3 class="works__name">Residence F</h3>
-              <span class="works__type">注文住宅 / Fukuoka</span>
-            </div>
-          </a>
-        </li>
-        <li class="works__item" data-reveal="up">
-          <a href="works.html" class="works__link">
-            <div class="frame frame--work"><span class="frame__ph">Project image</span></div>
-            <div class="works__caption">
-              <span class="works__year">2024</span>
-              <h3 class="works__name">Apartment Renovation</h3>
-              <span class="works__type">リノベーション / Shimane</span>
-            </div>
-          </a>
-        </li>
-        <li class="works__item" data-reveal="up">
-          <a href="works.html" class="works__link">
-            <div class="frame frame--work"><span class="frame__ph">Project image</span></div>
-            <div class="works__caption">
-              <span class="works__year">2023</span>
-              <h3 class="works__name">Interior Project</h3>
-              <span class="works__type">インテリア / Fukuoka</span>
-            </div>
-          </a>
-        </li>
-      </ul>
-
-      <a href="works.html" class="link-arrow works__viewall">
-        <span>VIEW ALL WORKS</span>
-        <svg viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="6" x2="34" y2="6" stroke="currentColor" stroke-width="1"/>
-          <polyline points="28,1 35,6 28,11" fill="none" stroke="currentColor" stroke-width="1"/>
-        </svg>
+    <section class="board__services" aria-label="Services">
+      <a href="works.html">
+        <span>01</span>
+        <strong>店舗設計・施工</strong>
+        <small>Shop / Salon / Office</small>
+      </a>
+      <a href="works.html">
+        <span>02</span>
+        <strong>注文住宅</strong>
+        <small>House planning</small>
+      </a>
+      <a href="works.html">
+        <span>03</span>
+        <strong>リノベーション</strong>
+        <small>Apartment renovation</small>
+      </a>
+      <a href="contact.html">
+        <span>04</span>
+        <strong>ご相談</strong>
+        <small>Fukuoka / Shimane</small>
       </a>
     </section>
-
-    <!-- ===== 05 CONTACT ===== -->
-    <section class="section section--contact" id="contact">
-      <header class="head">
-        <span class="head__num" data-reveal="up">05</span>
-        <div class="head__text" data-reveal="up" style="--d:.08s">
-          <span class="head__label">Contact</span>
-          <h2 class="head__title">お気軽に<br>ご相談ください。</h2>
-        </div>
-      </header>
-
-      <div class="contact__body" data-reveal="up" style="--d:.12s">
-        <p class="contact__lead">
-          ご相談は無料です。店舗から住まいのリフォームまで、まずは現在の状況やご希望をお聞かせください。
-        </p>
-
-        <div class="contact__grid">
-          <div class="contact__block">
-            <span class="contact__label">Fukuoka Office</span>
-            <p class="contact__value">福岡県福岡市南区的場 1-9-21-202</p>
-          </div>
-          <div class="contact__block">
-            <span class="contact__label">Shimane Office</span>
-            <p class="contact__value">島根県安来市安来 491-2</p>
-          </div>
-          <div class="contact__block">
-            <span class="contact__label">Email</span>
-            <p class="contact__value">info.kymdesignoffice@gmail.com</p>
-          </div>
-          <div class="contact__block">
-            <span class="contact__label">Instagram</span>
-            <a href="https://www.instagram.com/kymdesignoffice/" class="contact__value contact__sns" target="_blank" rel="noopener noreferrer" aria-label="Instagram @kymdesignoffice を開く">
-              <svg class="contact__sns-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="2.5" y="2.5" width="19" height="19" rx="5.2" stroke="currentColor" stroke-width="1.4"/>
-                <circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.4"/>
-                <circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/>
-              </svg>
-              <span>@kymdesignoffice</span>
-            </a>
-          </div>
-        </div>
-
-        <a href="mailto:info.kymdesignoffice@gmail.com" class="contact__cta">
-          <span>資料請求・お問い合わせ</span>
-          <svg viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="0" y1="6" x2="34" y2="6" stroke="currentColor" stroke-width="1"/>
-            <polyline points="28,1 35,6 28,11" fill="none" stroke="currentColor" stroke-width="1"/>
-          </svg>
-        </a>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ===== フッター ===== -->
-  <footer class="footer">
-    <img src="image_data/logo.png" alt="KYM DESIGN OFFICE" class="footer__logo">
-    <div class="footer__info">
-      <span class="footer__copy">© 2026 KYM DESIGN OFFICE</span>
-    </div>
-  </footer>
-
-  <!-- ===== スクリプト ===== -->
   <script src="js/lenis.min.js"></script>
   <script src="app.js"></script>
 
