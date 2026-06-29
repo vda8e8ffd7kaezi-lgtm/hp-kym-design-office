@@ -2183,6 +2183,275 @@ a:focus-visible {
   }
 }
 
+/* =========================================================
+   HOME - Split Cover
+   ========================================================= */
+.home-split {
+  min-height: 100dvh;
+  background: #f7f6f2;
+  color: #111;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid #111;
+}
+
+.home-split a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.split-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  min-height: 96px;
+  padding: 1.55rem 3.1vw;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.34);
+}
+
+.split-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.35rem;
+  font-size: clamp(0.92rem, 0.95vw, 1.18rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+}
+
+.split-brand img {
+  display: block;
+  width: clamp(40px, 3vw, 56px);
+  height: clamp(40px, 3vw, 56px);
+  object-fit: cover;
+  object-position: center top;
+}
+
+.split-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.1rem, 2.4vw, 3.2rem);
+  font-size: clamp(0.7rem, 0.72vw, 0.88rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.split-nav span {
+  color: rgba(17, 17, 17, 0.55);
+}
+
+.home-split .split-cover {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  min-height: calc(100dvh - 98px);
+}
+
+.home-split .split-cover__text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  padding: clamp(2.4rem, 4vw, 5rem) clamp(2rem, 4vw, 5.5rem);
+  border-right: 1px solid rgba(17, 17, 17, 0.34);
+}
+
+.home-split .split-cover__side {
+  position: absolute;
+  top: clamp(2.4rem, 4vw, 5rem);
+  right: clamp(1.4rem, 2vw, 2.4rem);
+  writing-mode: vertical-rl;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: rgba(17, 17, 17, 0.55);
+}
+
+.home-split .split-cover__head {
+  width: min(100%, 46rem);
+  padding-right: clamp(2rem, 5vw, 5rem);
+}
+
+.home-split .split-cover__head h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.6rem, 6.6vw, 8.2rem);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.home-split .split-cover__head p {
+  max-width: 26rem;
+  margin: 2rem 0 0;
+  font-size: clamp(0.86rem, 0.95vw, 1.02rem);
+  line-height: 1.85;
+  color: rgba(17, 17, 17, 0.7);
+  text-wrap: pretty;
+}
+
+.home-split .split-cover__meta {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(17, 17, 17, 0.28);
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.home-split .split-cover__meta p {
+  margin: 0;
+}
+
+.home-split .split-cover__meta strong {
+  font-size: clamp(2.4rem, 3.4vw, 4.2rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #111;
+}
+
+.home-split .split-cover__visual {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  filter: grayscale(1);
+}
+
+.home-split .split-cover__visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100dvh - 98px);
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  .split-header {
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: auto;
+    padding: 1.1rem;
+  }
+
+  .split-brand {
+    gap: 0.9rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.16em;
+  }
+
+  .split-brand img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .split-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    max-width: 100%;
+    gap: 0;
+    font-size: 0.66rem;
+  }
+
+  .split-nav a {
+    min-width: 0;
+  }
+
+  .split-nav a:nth-of-type(2) {
+    text-align: center;
+  }
+
+  .split-nav a:nth-of-type(3) {
+    text-align: right;
+  }
+
+  .split-nav span {
+    display: none;
+  }
+
+  .home-split .split-cover {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .home-split .split-cover__text {
+    min-height: 56dvh;
+    padding: 2rem 1.1rem 1.4rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.34);
+    overflow: hidden;
+  }
+
+  .home-split .split-cover__side {
+    position: static;
+    writing-mode: horizontal-tb;
+    margin-bottom: 2.2rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.24em;
+  }
+
+  .home-split .split-cover__head {
+    padding-right: 0;
+  }
+
+  .home-split .split-cover__head h1 {
+    font-size: clamp(3.2rem, 15vw, 5.1rem);
+  }
+
+  .home-split .split-cover__meta {
+    display: grid;
+    grid-template-columns: auto minmax(0, 12rem);
+    align-items: end;
+    margin-top: 3rem;
+  }
+
+  .home-split .split-cover__meta p {
+    max-width: 12rem;
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+
+  .home-split .split-cover__visual {
+    height: 44dvh;
+  }
+
+  .home-split .split-cover__visual img {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .split-nav {
+    justify-content: space-between;
+    font-size: 0.62rem;
+  }
+
+  .home-split .split-cover__head p {
+    font-size: 0.82rem;
+  }
+
+  .home-split .split-cover__meta {
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+  }
+
+  .home-split .split-cover__meta p {
+    max-width: 11rem;
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+}
+
 /* =====================================================================
    ANIMATION（Phase 1–4）
    ===================================================================== */
