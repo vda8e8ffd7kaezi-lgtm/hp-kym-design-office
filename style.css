@@ -860,16 +860,24 @@ a:focus-visible {
 .contact__cta svg { width: 40px; height: 12px; }
 
 /* ===== フッター ===== */
-.footer {
+.site-footer {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: clamp(3rem, 6vw, 5rem) var(--pad-x);
+  padding: clamp(3.5rem, 6vw, 6rem) var(--pad-x) clamp(1.6rem, 3vw, 2.4rem);
   border-top: 1px solid var(--line);
+}
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.4fr;
+  gap: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 3vw, 3rem);
+  align-items: start;
+}
+
+/* ブランド面 */
+.site-footer__brand {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem 2rem;
-  align-items: flex-end;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.4rem;
 }
 .footer__brand {
   display: inline-flex;
@@ -878,15 +886,77 @@ a:focus-visible {
   color: inherit;
   text-decoration: none;
 }
-.footer__info { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
-.footer__info span {
+.site-footer__tagline {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  color: var(--soft);
+}
+
+/* 各カラム */
+.site-footer__heading {
+  font-family: var(--font-grotesk);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 1.2rem;
+}
+.site-footer__col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.site-footer__col li {
+  font-family: var(--font-jp);
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.site-footer__col a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.site-footer__col a:hover { color: var(--gray); }
+
+/* 下段バー */
+.site-footer__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem 2rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(1.4rem, 2.5vw, 2rem);
+  border-top: 1px solid var(--line-soft);
+}
+.site-footer__bar span,
+.site-footer__top {
   font-family: var(--font-grotesk);
   font-size: 0.56rem;
   font-weight: 400;
   letter-spacing: 0.2em;
   color: var(--gray);
 }
-.footer__reg { font-family: var(--font-jp) !important; letter-spacing: 0.1em !important; }
+.site-footer__reg { font-family: var(--font-jp) !important; letter-spacing: 0.1em !important; }
+.site-footer__copy { text-transform: uppercase; }
+.site-footer__top {
+  margin-left: auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: color 0.3s ease;
+}
+.site-footer__top:hover { color: var(--ink); }
 
 /* ===== レスポンシブ ===== */
 @media (max-width: 900px) {
@@ -945,12 +1015,14 @@ a:focus-visible {
   .archive-note { grid-template-columns: 1fr; }
   .archive-grid { grid-template-columns: 1fr; }
   .archive-card:nth-child(even) { padding-top: 0; }
-  .footer { flex-direction: column; align-items: flex-start; }
-  .footer__info { text-align: left; }
+  .site-footer__inner { grid-template-columns: 1fr 1fr; }
+  .site-footer__brand { grid-column: 1 / -1; }
 }
 
 @media (max-width: 600px) {
   :root { --pad-x: 1.5rem; }
+  .site-footer__bar { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+  .site-footer__top { margin-left: 0; }
   .nav { align-items: flex-start; gap: 0.9rem; }
   .nav__logo img { height: 34px; }
   .nav__menu {

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABOUT｜KYM DESIGN OFFICE</title>
   <meta name="description" content="KYM DESIGN OFFICEの事務所案内です。代表者、建築士登録、対応領域、設計から施工までの流れを掲載しています。">
-  <link rel="stylesheet" href="style.css?v=20260630d">
+  <link rel="stylesheet" href="style.css?v=20260630f">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
 
   <!-- ===== ナビゲーション ===== -->
-  <header class="split-header">
+  <header class="split-header" id="top">
     <a class="split-brand" href="index.html" aria-label="KYM DESIGN OFFICE">
       <span class="logo-crop logo-crop--mark" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
       <span class="logo-crop logo-crop--word" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
@@ -92,15 +92,39 @@
   </main>
 
   <!-- ===== フッター ===== -->
-  <footer class="footer">
-    <a class="footer__brand" href="index.html" aria-label="KYM DESIGN OFFICE">
-      <span class="logo-crop logo-crop--mark" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
-      <span class="logo-crop logo-crop--word" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
-      <span class="sr-only">KYM DESIGN OFFICE</span>
-    </a>
-    <div class="footer__info">
-      <span class="footer__reg">二級建築士事務所 福岡県知事登録第2-60975号</span>
-      <span class="footer__copy">© 2026 KYM DESIGN OFFICE</span>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="footer__brand" href="index.html" aria-label="KYM DESIGN OFFICE">
+          <span class="logo-crop logo-crop--mark" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
+          <span class="logo-crop logo-crop--word" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
+          <span class="sr-only">KYM DESIGN OFFICE</span>
+        </a>
+        <p class="site-footer__tagline">Architecture &amp; Interior<br>Fukuoka / Shimane</p>
+      </div>
+
+      <nav class="site-footer__col" aria-label="Footer navigation">
+        <h2 class="site-footer__heading">Navigation</h2>
+        <ul>
+          <li><a href="profile.html">About</a></li>
+          <li><a href="https://www.instagram.com/kymdesignoffice/" target="_blank" rel="noopener noreferrer">Works</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Contact</h2>
+        <ul>
+          <li><a href="mailto:info.kymdesignoffice@gmail.com">info.kymdesignoffice@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/kymdesignoffice/" target="_blank" rel="noopener noreferrer">Instagram @kymdesignoffice</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bar">
+      <span class="site-footer__reg">二級建築士事務所 福岡県知事登録第2-60975号</span>
+      <span class="site-footer__copy">© 2026 KYM DESIGN OFFICE</span>
+      <a class="site-footer__top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
 
