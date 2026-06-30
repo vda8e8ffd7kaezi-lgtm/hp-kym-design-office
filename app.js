@@ -67,4 +67,41 @@
       });
     });
   }
+
+  /* ---------- お問い合わせフォーム（mailtoで送信）---------- */
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var to = contactForm.getAttribute('data-mailto') || '';
+      var getVal = function (sel) {
+        var el = contactForm.querySelector(sel);
+        return el ? el.value.trim() : '';
+      };
+
+      var name = getVal('#cf-name');
+      var email = getVal('#cf-email');
+      var message = getVal('#cf-message');
+
+      var topics = [];
+      contactForm.querySelectorAll('input[name="ご相談内容"]:checked').forEach(function (c) {
+        topics.push(c.value);
+      });
+
+      var subject = 'お問い合わせ' + (name ? '（' + name + '様）' : '');
+      var body = [
+        'お名前: ' + name,
+        'メールアドレス: ' + email,
+        'ご相談内容: ' + (topics.length ? topics.join('、') : '（未選択）'),
+        '',
+        'メッセージ本文:',
+        message
+      ].join('\n');
+
+      window.location.href = 'mailto:' + to +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+    });
+  }
 })();

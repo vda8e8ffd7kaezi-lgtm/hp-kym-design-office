@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WORKS｜KYM DESIGN OFFICE</title>
   <meta name="description" content="KYM DESIGN OFFICEの施工実績ページです。店舗設計・施工、注文住宅、マンションリフォーム、インテリアデザインの実績を掲載予定です。">
-  <link rel="stylesheet" href="style.css?v=20260627d">
+  <link rel="stylesheet" href="style.css?v=20260630d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,13 +13,17 @@
 <body>
 
   <!-- ===== ナビゲーション ===== -->
-  <header class="nav">
-    <a href="index.html" class="nav__logo">
-      <img src="image_data/logo.png" alt="KYM DESIGN OFFICE">
+  <header class="split-header">
+    <a class="split-brand" href="index.html" aria-label="KYM DESIGN OFFICE">
+      <span class="logo-crop logo-crop--mark" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
+      <span class="logo-crop logo-crop--word" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
+      <span class="sr-only">KYM DESIGN OFFICE</span>
     </a>
-    <nav class="nav__menu" aria-label="Main navigation">
-      <a href="works.html">WORKS</a>
-      <a href="profile.html">PROFILE</a>
+    <nav class="split-nav" aria-label="Main navigation">
+      <a href="profile.html">ABOUT</a>
+      <span>/</span>
+      <a href="https://www.instagram.com/kymdesignoffice/" target="_blank" rel="noopener noreferrer">WORKS</a>
+      <span>/</span>
       <a href="contact.html">CONTACT</a>
     </nav>
   </header>
@@ -106,9 +110,13 @@
 
   <!-- ===== フッター ===== -->
   <footer class="footer">
-    <img src="image_data/logo.png" alt="KYM DESIGN OFFICE" class="footer__logo">
+    <a class="footer__brand" href="index.html" aria-label="KYM DESIGN OFFICE">
+      <span class="logo-crop logo-crop--mark" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
+      <span class="logo-crop logo-crop--word" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
+      <span class="sr-only">KYM DESIGN OFFICE</span>
+    </a>
     <div class="footer__info">
-      <span class="footer__reg">二級建築士事務所 福岡県知事登録 第2-60660号</span>
+      <span class="footer__reg">二級建築士事務所 福岡県知事登録第2-60975号</span>
       <span class="footer__copy">© 2026 KYM DESIGN OFFICE</span>
     </div>
   </footer>

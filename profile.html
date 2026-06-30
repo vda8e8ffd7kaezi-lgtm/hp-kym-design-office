@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PROFILE｜KYM DESIGN OFFICE</title>
+  <title>ABOUT｜KYM DESIGN OFFICE</title>
   <meta name="description" content="KYM DESIGN OFFICEの事務所案内です。代表者、建築士登録、対応領域、設計から施工までの流れを掲載しています。">
-  <link rel="stylesheet" href="style.css?v=20260627d">
+  <link rel="stylesheet" href="style.css?v=20260630d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,13 +13,17 @@
 <body>
 
   <!-- ===== ナビゲーション ===== -->
-  <header class="nav">
-    <a href="index.html" class="nav__logo">
-      <img src="image_data/logo.png" alt="KYM DESIGN OFFICE">
+  <header class="split-header">
+    <a class="split-brand" href="index.html" aria-label="KYM DESIGN OFFICE">
+      <span class="logo-crop logo-crop--mark" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
+      <span class="logo-crop logo-crop--word" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
+      <span class="sr-only">KYM DESIGN OFFICE</span>
     </a>
-    <nav class="nav__menu" aria-label="Main navigation">
-      <a href="works.html">WORKS</a>
-      <a href="profile.html">PROFILE</a>
+    <nav class="split-nav" aria-label="Main navigation">
+      <a href="profile.html">ABOUT</a>
+      <span>/</span>
+      <a href="https://www.instagram.com/kymdesignoffice/" target="_blank" rel="noopener noreferrer">WORKS</a>
+      <span>/</span>
       <a href="contact.html">CONTACT</a>
     </nav>
   </header>
@@ -27,30 +31,28 @@
   <main>
     <section class="page-hero">
       <div class="page-hero__inner">
-        <span class="page-hero__label" data-reveal="up">Profile</span>
-        <h1 class="page-hero__title" data-reveal="up" style="--d:.08s">事務所案内</h1>
-        <p class="page-hero__lead" data-reveal="up" style="--d:.16s">
-          店舗から住まいまで、デザインと施工の両面から空間の質を整えます。
-        </p>
+        <span class="page-hero__label" data-reveal="up">About</span>
+        <h1 class="page-hero__title" data-reveal="up" style="--d:.08s">会社概要</h1>
       </div>
     </section>
 
     <section class="section profile-page">
-      <div class="profile-page__statement" data-reveal="up">
-        <p>
-          KYM DESIGN OFFICE は、店舗からマンションのリフォーム、注文住宅まで、
-          デザインから施工まで責任を持って手がけています。
-        </p>
-        <p>
-          新築・中古を問わず、住まう人・使う人のスタイルに寄り添い、
-          一つひとつの空間を丁寧に設計します。
-        </p>
+      <figure class="profile-page__portrait" data-reveal="up">
+        <img src="image_data/LINE_ALBUM_2026.6.29_260629_1.jpg" alt="KYM DESIGN OFFICE 設計者">
+      </figure>
+
+      <div class="profile-page__statement" data-reveal="up" style="--d:.08s">
+        <p>KYM DESIGN OFFICE は、住宅・店舗の設計から施工、インテリアまで一貫して手がける二級建築士事務所です。</p>
       </div>
 
-      <dl class="profile-list" data-reveal="up">
+      <dl class="profile-list" data-reveal="up" style="--d:.16s">
         <div>
           <dt>Principal</dt>
           <dd>渡部 聖美 / Kiyomi Watanabe</dd>
+        </div>
+        <div>
+          <dt>Birth</dt>
+          <dd>1985.12.25</dd>
         </div>
         <div>
           <dt>License</dt>
@@ -58,29 +60,17 @@
         </div>
         <div>
           <dt>Registration</dt>
-          <dd>福岡県知事登録 第2-60660号</dd>
-        </div>
-        <div>
-          <dt>Office</dt>
-          <dd>福岡県福岡市南区的場 1-9-21-202 / 島根県安来市安来 491-2</dd>
+          <dd>二級建築士事務所 福岡県知事登録第2-60975号</dd>
         </div>
       </dl>
     </section>
 
     <section class="section profile-process">
-      <header class="head">
-        <span class="head__num" data-reveal="up">01</span>
-        <div class="head__text" data-reveal="up" style="--d:.08s">
-          <span class="head__label">Process</span>
-          <h2 class="head__title">相談から完成まで、<br>一つずつ明確に。</h2>
-        </div>
-      </header>
-
       <ol class="process">
         <li class="process__item" data-reveal="up">
           <span class="process__no">01</span>
           <h3>ご相談</h3>
-          <p>ご要望・ご予算・物件状況を伺い、進め方を整理します。初回相談は無料です。</p>
+          <p>ご要望・ご予算・物件状況を伺い、進め方を整理します。</p>
         </li>
         <li class="process__item" data-reveal="up">
           <span class="process__no">02</span>
@@ -103,9 +93,13 @@
 
   <!-- ===== フッター ===== -->
   <footer class="footer">
-    <img src="image_data/logo.png" alt="KYM DESIGN OFFICE" class="footer__logo">
+    <a class="footer__brand" href="index.html" aria-label="KYM DESIGN OFFICE">
+      <span class="logo-crop logo-crop--mark" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
+      <span class="logo-crop logo-crop--word" aria-hidden="true"><img src="image_data/logo.png" alt=""></span>
+      <span class="sr-only">KYM DESIGN OFFICE</span>
+    </a>
     <div class="footer__info">
-      <span class="footer__reg">二級建築士事務所 福岡県知事登録 第2-60660号</span>
+      <span class="footer__reg">二級建築士事務所 福岡県知事登録第2-60975号</span>
       <span class="footer__copy">© 2026 KYM DESIGN OFFICE</span>
     </div>
   </footer>

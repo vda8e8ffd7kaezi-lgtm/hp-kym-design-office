@@ -3,3 +3,6 @@
 
 # Claude Code ローカル設定
 .claude/
+
+# 大容量の個人資料（GitHubの100MB上限超過のため除外・ローカル保管）
+image_data/KiyomiWatanabe.pdf
